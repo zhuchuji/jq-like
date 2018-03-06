@@ -1,1 +1,3 @@
-export * from './css-class.util.js'
+import JQuery from './jquery.js'
+
+export default JQuery

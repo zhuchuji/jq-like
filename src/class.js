@@ -20,7 +20,7 @@ function hasClassName (classNames, className) {
   return classReg.test(classNames)
 }
 
-class CssClassUtil {
+class ClassUtil {
   static hasClass (DOM, className) {
     return hasClassName(DOM.className, className)
   }
@@ -48,6 +48,7 @@ class CssClassUtil {
           resultClasses = resultClasses.replace(createClassReg(className, 'g'), ' ')
         }
       }
+      resultClasses = resultClasses.trim()
       if (resultClasses !== DOM.className) {
         DOM.className = resultClasses
       }
@@ -63,6 +64,7 @@ class CssClassUtil {
       } else {
         resultClasses = resultClasses + ' ' + className
       }
+      resultClasses = resultClasses.trim()
     }
     if (resultClasses !== DOM.className) {
       DOM.className = resultClasses
@@ -70,4 +72,4 @@ class CssClassUtil {
   }
 }
 
-export default CssClassUtil
+export default ClassUtil

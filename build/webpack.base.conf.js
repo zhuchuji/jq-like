@@ -1,9 +1,6 @@
 const path = require('path')
 
 const webpackBaseConf = {
-	entry: {
-		app: './src/main.js',
-	},
 	output: {
 		filename: 'js/[name].[hash:8].js',
 		path: path.resolve('dist')
